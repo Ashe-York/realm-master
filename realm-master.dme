@@ -1,0 +1,28 @@
+// DM Environment file for realm-master.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+#define DEBUG
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "src\_basics.dm"
+#include "src\_defines.dm"
+#include "src\Code\turfs.dm"
+#include "src\Code\Creatures\general.dm"
+#include "src\Code\Creatures\movement.dm"
+#include "src\Code\Creatures\selection.dm"
+#include "src\Code\Creatures\Races\elf.dm"
+#include "src\Code\Creatures\Races\goblin.dm"
+#include "src\Code\Creatures\Races\human.dm"
+#include "src\Code\Player\playeravatar.dm"
+// END_INCLUDE
+
