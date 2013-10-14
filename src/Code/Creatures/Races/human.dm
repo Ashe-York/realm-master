@@ -2,6 +2,7 @@
 
 	icon = 'src/Sprites/Creatures/human.dmi'
 
+	walk_delay = 2
 
 	attribute_strength     = 5
 	attribute_agility      = 5

@@ -14,15 +14,18 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
-#include "src\_basics.dm"
-#include "src\_defines.dm"
+#include "src\basic.dm"
+#include "src\defines.dm"
+#include "src\Code\debug.dm"
 #include "src\Code\turfs.dm"
 #include "src\Code\Creatures\general.dm"
 #include "src\Code\Creatures\movement.dm"
+#include "src\Code\Creatures\ownership.dm"
 #include "src\Code\Creatures\selection.dm"
 #include "src\Code\Creatures\Races\elf.dm"
 #include "src\Code\Creatures\Races\goblin.dm"
 #include "src\Code\Creatures\Races\human.dm"
 #include "src\Code\Player\playeravatar.dm"
+#include "src\Maps\testing.dmm"
 // END_INCLUDE
 
