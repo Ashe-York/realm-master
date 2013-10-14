@@ -24,8 +24,3 @@
 
 	USER.client.images -= selected_icon
 	USER.list_selected_creatures -= src
-
-
-/mob/creature/New()
-	var/image/REF = new('src/Sprites/Effects/creature_select.dmi', src)
-	src.selected_icon = REF

@@ -4,7 +4,7 @@
 
 	var/owner
 
-	var/destination
+	var/tmp/destination
 	var/walk_delay
 
 	var/age
@@ -25,3 +25,9 @@
 	var/skill_fishing
 	var/skill_woodcutting
 	var/skill_crafting
+
+/mob/creature/New()
+	spawn() StartAllProcs()
+	..()
+	var/image/REF = new('src/Sprites/Effects/creature_select.dmi', src)
+	src.selected_icon = REF

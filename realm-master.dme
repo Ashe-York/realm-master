@@ -21,6 +21,7 @@
 #include "src\Code\Creatures\general.dm"
 #include "src\Code\Creatures\movement.dm"
 #include "src\Code\Creatures\ownership.dm"
+#include "src\Code\Creatures\proc_startup.dm"
 #include "src\Code\Creatures\selection.dm"
 #include "src\Code\Creatures\Races\elf.dm"
 #include "src\Code\Creatures\Races\goblin.dm"

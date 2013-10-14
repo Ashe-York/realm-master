@@ -15,7 +15,7 @@
 		src.Movement()
 	else
 		step_rand(src)
-		sleep(10)
+		sleep(rand(3, 12))
 		src.Movement()
 
 
