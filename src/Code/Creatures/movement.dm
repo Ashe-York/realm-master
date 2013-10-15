@@ -8,8 +8,13 @@
 	while (TRUE)
 
 		if (destination && get_dist(src, destination) >= 1)
-			step_towards(src, destination)
-			sleep(walk_delay)
+			if (get_dist(src, destination) > 1)
+				step_to(src, destination)
+				sleep(walk_delay)
+			if (get_dist(src, destination) == 1)
+				step_towards(src, destination)
+				sleep(walk_delay)
+
 
 		else if (!owner && !destination)
 			step_rand(src)
