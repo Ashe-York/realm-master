@@ -10,6 +10,9 @@
 	var/age
 	var/die_age
 
+	var/will_dig
+	var/dig_target
+
 /mob/creature
 	var/selected = FALSE
 	var/selected_icon

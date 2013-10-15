@@ -2,6 +2,7 @@ turf/wall
 	density = 1
 	opacity = 1
 	icon = 'src/Sprites/Turfs/wall.dmi'
+	var/diggable = TRUE
 
 
 turf/floor
