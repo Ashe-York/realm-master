@@ -15,7 +15,6 @@
 				step_towards(src, destination)
 				sleep(walk_delay)
 
-
 		else if (!owner && !destination)
 			step_rand(src)
 			sleep(10)

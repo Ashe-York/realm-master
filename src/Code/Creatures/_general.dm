@@ -13,9 +13,12 @@
 	var/will_dig
 	var/dig_target
 
+	var/minimum_damage = 1
+	var/maximum_damage = 5
+
 /mob/creature
 	var/selected = FALSE
-	var/selected_icon
+	var/icon_selected
 
 /mob/creature
 	var/attribute_strength
@@ -32,5 +35,5 @@
 /mob/creature/New()
 	spawn() StartAllProcs()
 	..()
-	var/image/REF = new('src/Sprites/Effects/creature_select.dmi', src)
-	src.selected_icon = REF
+	var/image/REF_image = new('src/Sprites/Effects/creature_select.dmi', src)
+	src.icon_selected = REF_image

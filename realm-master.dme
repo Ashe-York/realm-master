@@ -27,6 +27,7 @@
 #include "src\Code\Creatures\Races\elf.dm"
 #include "src\Code\Creatures\Races\goblin.dm"
 #include "src\Code\Creatures\Races\human.dm"
+#include "src\Code\Items\resources.dm"
 #include "src\Code\Player\playeravatar.dm"
 #include "src\Maps\testing.dmm"
 // END_INCLUDE
