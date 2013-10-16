@@ -1,11 +1,19 @@
+//////////////////////////////////////////
+//
+// Remember to separate related things with
+// either line-breaks or a new 'path', for
+// readability and organizational purposes.
+//
+//////////////////////////////////////////
+
 /mob/creature
 	var/health     = 350
 	var/max_health = 350
 
-	var/owner
+	var/owner // References a player.
 
 	var/tmp/destination
-	var/walk_delay
+	var/step_delay
 
 	var/age
 	var/die_age
@@ -16,9 +24,8 @@
 	var/minimum_damage = 1
 	var/maximum_damage = 5
 
-/mob/creature
 	var/selected = FALSE
-	var/icon_selected
+	var/icon_selected // Stores the selection icon which goes above the creature's head when selected.
 
 /mob/creature
 	var/attribute_strength
@@ -31,9 +38,10 @@
 	var/skill_fishing
 	var/skill_woodcutting
 	var/skill_crafting
+	var/skill_construction
 
 /mob/creature/New()
 	spawn() StartAllProcs()
 	..()
 	var/image/REF_image = new('src/Sprites/Effects/creature_select.dmi', src)
-	src.icon_selected = REF_image
+	src.icon_selected = REF_image // The selection icon which goes above the creature's head when selected.

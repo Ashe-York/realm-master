@@ -1,14 +1,22 @@
 #ifdef DEBUG
 
+//////////////////////////////////////////
+// Verb: CountMobs
+// Clearly tells you the number
+// of mobs in the current world.
+
 /mob/player/verb/CountMobs()
 	var/counter
 	for (var/mob/creature/REF in world)
 		counter++
 	src << "There are [counter] mobs in the world."
 
-/mob/creature/verb/MakeMove()
-	set src in view(1)
-	src.Movement()
+
+
+//////////////////////////////////////////
+// Verb: ToggleControl
+// Clearly takes over the mob. Used for testing
+// for obvious reasons.
 
 /mob/creature/verb/ToggleControl()
 	set src in view(1)
@@ -23,6 +31,14 @@
 		src.RemoveOwner(usr)
 		usr << "Control removed..."
 
+
+
+//////////////////////////////////////////
+// Verb: ToggleDig()
+// In case we need it to dig and it is not digging.
+// Should not actually be necessary, anymore, but
+// just in case it is being left here.
+
 /mob/creature/verb/ToggleDig()
 	set src in view(1)
 	if (src.owner == usr && !will_dig)
@@ -30,4 +46,5 @@
 		src.Dig()
 	if (src.owner == usr && will_dig)
 		src.will_dig = FALSE
+
 #endif

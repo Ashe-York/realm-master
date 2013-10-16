@@ -8,15 +8,14 @@
 	while (TRUE)
 
 		if (destination && get_dist(src, destination) >= 1)
-			if (get_dist(src, destination) > 1)
+			if (get_dist(src, destination) > 1) // Includes pathfinding...
 				step_to(src, destination)
-				sleep(walk_delay)
-			if (get_dist(src, destination) == 1)
+			else if (get_dist(src, destination) == 1) // Does not include pathfinding. Causes it to 'bump' destination.
 				step_towards(src, destination)
-				sleep(walk_delay)
+			sleep(step_delay)
 
 		else if (!owner && !destination)
-			step_rand(src)
+			step_rand(src) // Will likely replace with 'NPCBehavior()', an as of yet unmade proc, at some point.
 			sleep(10)
 
 		else

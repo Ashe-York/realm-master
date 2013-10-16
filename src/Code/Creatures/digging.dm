@@ -3,7 +3,7 @@
 	icon = 'src/Sprites/Effects/digging.dmi'
 	icon_state = "dig_at"
 
-/mob/creature/proc/Dig()
+/mob/creature/proc/Dig() // Called by the debug verb as well as when a wall is set to be dug.
 	while (will_dig)
 		for (var/obj/effect/digAt/REF_dig in oview(src))
 			if (REF_dig.digger == src)
@@ -13,7 +13,7 @@
 					src.dig_target = REF_dig
 		sleep(1)
 
-/mob/creature/Bump(var/atom/obstacle)
+/mob/creature/Bump(var/atom/obstacle) // Write what is done to the thing being dug here.
 	flick("flick_dig", obstacle)
 
 /turf/wall/DblClick()

@@ -1,7 +1,7 @@
-/mob/creature/proc/MakeOwner(var/mob/player/owned)
-	src.owner = owned
-	owned.list_creatures += src
+/mob/creature/proc/MakeOwner(var/mob/player/REF_player)
+	src.owner = REF_player
+	REF_player.list_creatures += src
 
-/mob/creature/proc/RemoveOwner(var/mob/player/owned)
+/mob/creature/proc/RemoveOwner(var/mob/player/REF_player)
 	src.owner = null
-	owned.list_creatures -= src
+	REF_player.list_creatures -= src

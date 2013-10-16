@@ -1,3 +1,8 @@
+//////////////////////////////////////////
+// NOTE: All of these are temporary and only for the purposes
+// of debugging at the moment. Thank you.
+
+
 turf/wall
 	density = 1
 	opacity = 1
