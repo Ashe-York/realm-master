@@ -15,17 +15,12 @@
 /mob/creature/proc/Select(mob/player/USER)
 	src.selected = TRUE
 
-	USER.client.images += selected_icon
+	USER.client.images += icon_selected
 	USER.list_selected_creatures += src
 
 
 /mob/creature/proc/Deselect(mob/player/USER)
 	src.selected = FALSE
 
-	USER.client.images -= selected_icon
+	USER.client.images -= icon_selected
 	USER.list_selected_creatures -= src
-
-
-/mob/creature/New()
-	var/image/REF = new('src/Sprites/Effects/creature_select.dmi', src)
-	src.selected_icon = REF

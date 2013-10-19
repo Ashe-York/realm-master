@@ -1,7 +1,14 @@
+//////////////////////////////////////////
+// NOTE: All of these are temporary and only for the purposes
+// of debugging at the moment. Thank you.
+
+
 turf/wall
 	density = 1
 	opacity = 1
 	icon = 'src/Sprites/Turfs/wall.dmi'
+	var/diggable = TRUE
+	var/health = 100
 
 
 turf/floor
