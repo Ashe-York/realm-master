@@ -13,9 +13,13 @@
 					src.dig_target = REF_dig
 		sleep(1)
 
-/mob/creature/Bump(var/turf/wall/obstacle) // Write what is done to the thing being dug here.
-	flick("flick_dig", obstacle)
-	obstacle.Mine(src.skill_mining)
+/mob/creature/Bump(var/atom/obstacle) // Write what is done to the thing being dug here.
+
+	if (obstacle.type == /turf/wall)
+		var/turf/wall/REF_obstacle = obstacle
+		if (REF_obstacle.diggable == TRUE)
+			flick("flick_dig", REF_obstacle)
+			REF_obstacle.Mine(src.skill_mining)
 
 /turf/wall/proc/Mine(loss) // loss refers to how much 'health' the wall loses.
 	health -= loss
