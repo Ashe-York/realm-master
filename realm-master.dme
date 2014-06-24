@@ -30,6 +30,7 @@
 #include "src\Code\Creatures\ownership.dm"
 #include "src\Code\Creatures\proc_startup.dm"
 #include "src\Code\Creatures\selection.dm"
+#include "src\Code\Creatures\Beasts\wolves.dm"
 #include "src\Code\Creatures\Races\elf.dm"
 #include "src\Code\Creatures\Races\goblin.dm"
 #include "src\Code\Creatures\Races\human.dm"

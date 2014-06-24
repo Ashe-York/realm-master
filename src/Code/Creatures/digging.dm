@@ -19,16 +19,18 @@
 		var/turf/wall/REF_obstacle = obstacle
 		if (REF_obstacle.diggable == TRUE)
 			flick("flick_dig", REF_obstacle)
-			REF_obstacle.Mine(src.skill_mining)
+			REF_obstacle.Mine(src.skill_mining, src.owner)
 
-/turf/wall/proc/Mine(loss) // loss refers to how much 'health' the wall loses.
+/turf/wall/proc/Mine(loss, owner) // loss refers to how much 'health' the wall loses.
 	health -= loss
 	if (health <= 0)
 		var/REF_ground = src.underneath
+		for (var/obj/effect/digAt/REF_dig in view(0, src))
+			if (REF_dig)
+				src.ToggleDigAt(owner)
 		new REF_ground(src)
 
-/turf/wall/DblClick()
-	var/mob/player/REF_player = usr
+/turf/wall/proc/ToggleDigAt(var/mob/player/REF_player)
 	for (var/mob/creature/REF_creature in REF_player.list_selected_creatures)
 
 		for (var/obj/effect/digAt/REF_dig in view(0, src))
@@ -44,3 +46,6 @@
 			REF_dig.loc = locate(src.x, src.y, src.z)
 			REF_dig.digger = REF_creature
 			REF_creature.Dig()
+
+/turf/wall/DblClick()
+	src.ToggleDigAt(usr)

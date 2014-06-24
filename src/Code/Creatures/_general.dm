@@ -23,8 +23,8 @@
 	var/will_dig
 	var/dig_target
 
-	var/minimum_damage = 1
-	var/maximum_damage = 5
+	var/minimum_damage
+	var/maximum_damage
 
 
 /mob/creature

@@ -16,3 +16,7 @@
 	skill_fishing       = 5
 	skill_woodcutting   = 5
 	skill_crafting      = 5
+
+
+	minimum_damage		= 1
+	maximum_damage		= 5
