@@ -13,8 +13,15 @@
 					src.dig_target = REF_dig
 		sleep(1)
 
-/mob/creature/Bump(var/atom/obstacle) // Write what is done to the thing being dug here.
+/mob/creature/Bump(var/turf/wall/obstacle) // Write what is done to the thing being dug here.
 	flick("flick_dig", obstacle)
+	obstacle.Mine(src.skill_mining)
+
+/turf/wall/proc/Mine(loss) // loss refers to how much 'health' the wall loses.
+	health -= loss
+	if (health <= 0)
+		var/REF_ground = src.underneath
+		new REF_ground(src)
 
 /turf/wall/DblClick()
 	var/mob/player/REF_player = usr
@@ -29,7 +36,7 @@
 
 		if (src.density == TRUE && src.diggable == TRUE)
 			REF_creature.destination = null
-			var/obj/effect/digAt/REF_dig2 = new
-			REF_dig2.loc = locate(src.x, src.y, src.z)
-			REF_dig2.digger = REF_creature
+			var/obj/effect/digAt/REF_dig = new
+			REF_dig.loc = locate(src.x, src.y, src.z)
+			REF_dig.digger = REF_creature
 			REF_creature.Dig()

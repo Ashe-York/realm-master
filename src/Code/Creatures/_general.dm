@@ -7,10 +7,10 @@
 //////////////////////////////////////////
 
 /mob/creature
-	var/health     = 350
-	var/max_health = 350
 
-	var/owner // References a player.
+	var/owner // References a player
+	var/selected = FALSE
+	var/icon_selected // Stores the selection icon which goes above the creature's head when selected.
 
 	var/tmp/destination
 	var/step_delay
@@ -24,10 +24,12 @@
 	var/minimum_damage = 1
 	var/maximum_damage = 5
 
-	var/selected = FALSE
-	var/icon_selected // Stores the selection icon which goes above the creature's head when selected.
 
 /mob/creature
+
+	var/health     = 350
+	var/max_health = 350
+
 	var/attribute_strength
 	var/attribute_agility
 	var/attribute_endurance
