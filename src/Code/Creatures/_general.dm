@@ -20,9 +20,6 @@
 	var/age
 	var/die_age
 
-	var/will_dig
-	var/dig_target
-
 	var/minimum_damage
 	var/maximum_damage
 

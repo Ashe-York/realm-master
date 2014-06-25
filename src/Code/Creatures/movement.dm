@@ -1,8 +1,12 @@
 /atom/Click()
 	var/mob/creature/REF_creature
 	var/mob/player/REF_player = usr
+
+	if(src in REF_player.list_creatures) return
+
 	for (REF_creature in REF_player.list_selected_creatures)
 		REF_creature.destination = src
+
 
 /mob/creature/proc/Movement()
 	while (TRUE)
