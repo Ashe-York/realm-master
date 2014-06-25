@@ -10,6 +10,7 @@
 	density = 0
 	var/list/list_creatures = list()
 	var/tmp/list/list_selected_creatures = list()
+	var/tmp/list/list_toBeDug = list()
 
 /mob/player/verb/OOC(msg as text)
 	set hidden = 1

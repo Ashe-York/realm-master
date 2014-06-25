@@ -7,8 +7,10 @@ turf/wall
 	density = 1
 	opacity = 1
 	icon = 'src/Sprites/Turfs/wall.dmi'
+
 	var/diggable = TRUE
 	var/health = 100
+	var/underneath = /turf/floor
 
 
 turf/floor
