@@ -48,15 +48,12 @@
 
 	var/turf/wall/REF_wall = src
 	for (var/obj/effect/digAt/REF_dig in view(0, src))
-		world << "DEBUG A"
 		if (REF_wall in REF_player.list_toBeDug)
-			world << "DEBUG C"
 			REF_player.list_toBeDug -= REF_wall
 			del(REF_dig)
 			return
 
 	if (REF_wall.density == TRUE && REF_wall.diggable == TRUE)
-		world << "DEBUG B"
 		var/obj/effect/digAt/REF_dig = new
 		REF_dig.loc = locate(REF_wall.x, REF_wall.y, REF_wall.z)
 		REF_player.list_toBeDug += REF_wall
