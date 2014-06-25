@@ -3,8 +3,9 @@
 "c" = (/obj/resource/stone,/turf/floor,/area)
 "d" = (/mob/creature/human,/turf/floor,/area)
 "e" = (/turf/water,/area)
-"f" = (/obj/resource/wood,/turf/floor,/area)
-"g" = (/obj/resource/bone,/turf/floor,/area)
+"f" = (/mob/creature/human{name = "human_2"},/turf/floor,/area)
+"g" = (/obj/resource/wood,/turf/floor,/area)
+"h" = (/obj/resource/bone,/turf/floor,/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -44,12 +45,12 @@ bbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 bbbbbbbbbbbdbbdbbdbbdbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 eebbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 eeeebbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
-eeeebbbbbbbdbbdbbdbbdbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
-eeeebbffffbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
+eeeebbbbbbbdbbdbbdbbfbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
+eeeebbggggbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 eeeeeeeeeebbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 eeeeeeeeeebbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 eeeeeeeeeebbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
-eeeeeeeeeebggggbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
+eeeeeeeeeebhhhhbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 eeeeeeeeeeeeeeebbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 eeeeeeeeeeeeeeebbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaa
 eeeeeeeeeeeeeeeeeeeeeeebaaaaaaaaaaaaaaaaaaaaaaaaaa

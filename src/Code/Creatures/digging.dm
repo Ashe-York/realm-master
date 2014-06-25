@@ -43,27 +43,23 @@
 /turf/proc/ToggleDigAt(var/mob/player/REF_player)
 
 	if (src.type != /turf/wall) return
+
+
+
 	var/turf/wall/REF_wall = src
+	for (var/obj/effect/digAt/REF_dig in view(0, src))
+		world << "DEBUG A"
+		if (REF_wall in REF_player.list_toBeDug)
+			world << "DEBUG C"
+			REF_player.list_toBeDug -= REF_wall
+			del(REF_dig)
+			return
 
-	for (var/mob/creature/REF_creature in REF_player.list_creatures)
-
-		for (var/obj/effect/digAt/REF_dig in view(0, src))
-			world << "DEBUG A"
-			if (REF_wall in REF_player.list_toBeDug)
-				world << "DEBUG C"
-				REF_creature.destination = null
-				REF_creature.dig_target = null
-				REF_player.list_toBeDug -= REF_wall
-				del(REF_dig)
-				return
-
-		if (REF_wall.density == TRUE && REF_wall.diggable == TRUE)
-			world << "DEBUG B"
-			REF_creature.destination = null
-			var/obj/effect/digAt/REF_dig = new
-			REF_dig.loc = locate(REF_wall.x, REF_wall.y, REF_wall.z)
-			REF_player.list_toBeDug += REF_wall
-			REF_creature.Dig()
+	if (REF_wall.density == TRUE && REF_wall.diggable == TRUE)
+		world << "DEBUG B"
+		var/obj/effect/digAt/REF_dig = new
+		REF_dig.loc = locate(REF_wall.x, REF_wall.y, REF_wall.z)
+		REF_player.list_toBeDug += REF_wall
 
 
 /turf/wall/DblClick()
