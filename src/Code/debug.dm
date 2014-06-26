@@ -50,9 +50,4 @@
 	else
 		world << "You don't own this creature."
 
-/mob/creature/verb/MakeDig()
-	set src in view(1)
-	world << "Making [src] dig."
-	src.Dig()
-
 #endif
