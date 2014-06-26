@@ -43,8 +43,11 @@
 	set src in view(1)
 	if (src.owner == usr && !will_dig)
 		src.will_dig = TRUE
-		src.Dig()
-	if (src.owner == usr && will_dig)
+		world << "Setting will_dig to TRUE"
+	else if (src.owner == usr && will_dig)
 		src.will_dig = FALSE
+		world << "Setting will_dig to FALSE"
+	else
+		world << "You don't own this creature."
 
 #endif
