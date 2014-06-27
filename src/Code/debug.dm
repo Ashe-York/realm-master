@@ -50,4 +50,70 @@
 	else
 		world << "You don't own this creature."
 
+
+
+//////////////////////////////////////////
+// Verb: ChangeAttribute
+// Simply here to directly allow the developer
+// to test the changing of attributes.
+
+/mob/creature/verb/ChangeAttribute()
+	set src in view(1)
+
+	var/attribute = input("Which attribute?")
+	var/change = input("How much?")
+	var/chance = input("How likely?")
+
+	ModifyAttribute(attribute, change, chance)
+
+
+
+//////////////////////////////////////////
+// Verb: ChangeSkill
+// Simply here to directly allow the developer
+// to test the changing of skills.
+
+/mob/creature/verb/ChangeSkill()
+	set src in view(1)
+
+	var/skill = input("Which skill?") as text
+	var/change = input("How much?") as num
+	var/chance = input("How likely?") as num
+
+	ModifySkill(skill, change, chance)
+
+
+
+//////////////////////////////////////////
+// Verb: ViewStats
+// Needs to be changed into its own statpanel in the future,
+// but for now-- For debugging purposes, it works fine like this.
+
+/mob/creature/verb/ViewStats()
+	set src in view(1)
+	usr << "------------------------------"
+
+	usr << "Name: [src.name]:"
+	usr << "---"
+	usr << "Attributes:"
+
+	usr << "Strength: [src.attribute_strength]"
+	usr << "Agility: [src.attribute_agility]"
+	usr << "Endurance: [src.attribute_endurance]"
+	usr << "Intelligence: [src.attribute_intelligence]"
+
+	usr << "---"
+	usr << "Skills:"
+
+	usr << "Combat: [src.skill_combat]"
+	usr << "Mining: [src.skill_mining]"
+	usr << "Fishing: [src.skill_fishing]"
+	usr << "Woodcutting: [src.skill_woodcutting]"
+	usr << "Crafting: [src.skill_crafting]"
+	usr << "Construction: [src.skill_construction]"
+
+	usr << "------------------------------"
+
+
+
 #endif

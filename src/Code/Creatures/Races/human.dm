@@ -5,6 +5,8 @@
 
 	step_delay = 4
 
+	health
+	max_health
 
 	attribute_strength     = 5
 	attribute_agility      = 5
