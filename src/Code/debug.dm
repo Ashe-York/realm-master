@@ -52,6 +52,11 @@
 
 
 
+//////////////////////////////////////////
+// Verb: ChangeAttribute
+// Simply here to directly allow the developer
+// to test the changing of attributes.
+
 /mob/creature/verb/ChangeAttribute()
 	set src in view(1)
 
@@ -63,6 +68,11 @@
 
 
 
+//////////////////////////////////////////
+// Verb: ChangeSkill
+// Simply here to directly allow the developer
+// to test the changing of skills.
+
 /mob/creature/verb/ChangeSkill()
 	set src in view(1)
 
@@ -73,6 +83,11 @@
 	ModifySkill(skill, change, chance)
 
 
+
+//////////////////////////////////////////
+// Verb: ViewStats
+// Needs to be changed into its own statpanel in the future,
+// but for now-- For debugging purposes, it works fine like this.
 
 /mob/creature/verb/ViewStats()
 	set src in view(1)
