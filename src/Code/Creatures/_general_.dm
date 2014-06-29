@@ -23,6 +23,7 @@
 	var/minimum_damage
 	var/maximum_damage
 
+	var/NPC = TRUE // For use in 'ownership' calculations and procs. Turned off when owned, so 'NPC' by default.
 
 
 /mob/creature/New()
