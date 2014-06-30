@@ -93,7 +93,8 @@
 	set src in view(1)
 	usr << "------------------------------"
 
-	usr << "Name: [src.name]:"
+
+	usr << "Name: [src.name]"
 	usr << "---"
 	usr << "Attributes:"
 
@@ -111,6 +112,14 @@
 	usr << "Woodcutting: [src.skill_woodcutting]"
 	usr << "Crafting: [src.skill_crafting]"
 	usr << "Construction: [src.skill_construction]"
+
+	usr << "---"
+	usr << "Needs:"
+
+	usr << "Hunger: [src.need_hunger]"
+	usr << "Thirst: [src.need_thirst]"
+	usr << "Sleep: [src.need_sleep]"
+
 
 	usr << "------------------------------"
 
